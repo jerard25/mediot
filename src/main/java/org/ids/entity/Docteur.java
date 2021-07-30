@@ -17,11 +17,13 @@ import lombok.ToString;
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 
   @AllArgsConstructor @NoArgsConstructor @ToString
-public class Personne implements Serializable {
+public class Docteur implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	@Column(unique = true,nullable = false)
-	private long idPersonne;
+	private long idDocteur;
+	@Column(unique = true,nullable = false)
+	private String docteurId;
 	@Column(nullable = false)
 	private String nom;
 	@Column(nullable = false)
@@ -40,5 +42,9 @@ public class Personne implements Serializable {
 	private String centre;
 	@Column(nullable = false)
 	private Date dateCreation;
+	@Column(unique = true,nullable = false)
+	private String cin;
+	@Column(unique = true,nullable = false)
+	private String cnss;
 	
 }

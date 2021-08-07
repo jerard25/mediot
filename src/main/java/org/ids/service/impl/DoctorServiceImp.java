@@ -50,7 +50,7 @@ public class DoctorServiceImp implements DoctorService {
 		Doctor checkDoc = doctorRepository.findAllByEmail(doctorDto.getEmail());
 
 		if (checkDoc != null)
-			throw new RuntimeException("ce compte déjà entregistrer");
+			throw new RuntimeException("ce compte déjà enregistrer");
 
 		Doctor doctorEntity = new Doctor();
 
@@ -202,3 +202,4 @@ public class DoctorServiceImp implements DoctorService {
 	}
 
 }
+
